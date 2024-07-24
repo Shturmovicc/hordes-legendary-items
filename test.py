@@ -45,6 +45,8 @@ class TestFiles(unittest.TestCase):
                     avif = Path(f'{rootdir}/{type}/{type}{tier}_q{qual}.avif')
                     self.assertTrue(webp.is_file(), f'Failed {webp}')
                     self.assertTrue(avif.is_file(), f'Failed {avif}')
+            
+            print(f'| {type} | {tier}/{tier} | {qual}/5 |')
 
     def test_file_corruption(self):
         for type in typetiers:
